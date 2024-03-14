@@ -10,9 +10,8 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            ls -a
+            whoami
           host: ${{ secrets.HOST }}
           user: theking
 #          key: ${{ secrets.PRIVATE_KEY}}
           pass: ${{ secrets.PASS }}
-          args: "-tt -vvv"
