@@ -1,0 +1,22 @@
+name: Remote SSH Login
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  remote_ssh_login:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install SSH Client
+      run: sudo apt-get install openssh-client -y
+
+    - name: Remote SSH command
+      run: sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "whoami"
+      env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
