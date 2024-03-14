@@ -2,8 +2,6 @@ name: Remote SSH Login
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   remote_ssh_login:
