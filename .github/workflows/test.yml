@@ -10,10 +10,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd /tmp
             ls -a
-            echo "env_var:$FIRST_NAME"
-            exit 1
           host: ${{ secrets.HOST }}
           user: theking
 #          key: ${{ secrets.PRIVATE_KEY}}
