@@ -1,6 +1,8 @@
 name: test
 on:
   push:
+  schedule:
+    - cron: '0 12 */7 * *'
 
 jobs:
   build:
@@ -11,6 +13,7 @@ jobs:
         with:
           command: |
             whoami
+            ls -a
           host: ${{ secrets.HOST }}
           user: theking
 #          key: ${{ secrets.PRIVATE_KEY}}
