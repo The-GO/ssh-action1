@@ -1,11 +1,7 @@
 name: test
 on:
   push:
-    branches:
-    - stage
 
-env:
-  FIRST_NAME: Mona
 jobs:
   build:
     runs-on: ubuntu-latest
