@@ -15,7 +15,7 @@ jobs:
             whoami
             ls -a
           host: ${{ secrets.HOST }}
-          user: theking
+          user: ${{ secrets.USER }}
 #          key: ${{ secrets.PRIVATE_KEY}}
           pass: ${{ secrets.PASS }}
           args: "-tt -vvv"
