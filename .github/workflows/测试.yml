@@ -2,15 +2,8 @@ name: 自动部署
 
 on:
   push:
-    branches:
-      - master
-    # paths-ignore:
-    #   - README.md
-    #   - LICENSE
-    corn
-    paths:
-      - src/**
-      - package.json
+  schedule:
+    - cron: '0 12 */3 * *'
 
 jobs:
   deploy:
