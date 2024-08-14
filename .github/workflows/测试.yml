@@ -15,7 +15,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          password: ${{ secrets.SSH_PASS }}
+          password: ${{ secrets.PASS }}
 
           script: |
             whoami
